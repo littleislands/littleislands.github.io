@@ -1,0 +1,676 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Little Islands Community Staff Goals &amp; Expectations</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2fcf96b2-c89b-4295-9813-f48fe842c92e" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📜</span></div><h1 class="page-title">Little Islands Community Staff Goals &amp; Expectations</h1></header><div class="page-body"><figure id="a11370ee-ccf1-4251-b927-09316e0624ac" class="image"><a href="christmas_banner_-_bryson2-01.png"><img style="width:3827px" src="christmas_banner_-_bryson2-01.png"/></a></figure><p id="15871489-43da-492d-8b62-7420c0c82a9d" class="">
+</p><nav id="d39fe731-6e05-4ad8-b305-e1e365d455eb" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#fbccecc3-392c-4879-8f23-c533ed7e20a3">Staff Goals &amp; Expectations</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f68bcc45-0643-463b-87da-5b990fa19149">Moderator Expectations</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#4ae82701-1ea2-4d1e-9979-4dfbec7387e7"><mark class="highlight-yellow_background"><strong>@Trainee Moderator </strong></mark><mark class="highlight-yellow_background">🔨</mark>  </a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#9986bab6-bb35-450e-9fdc-c56288f2030e"><strong><mark class="highlight-orange_background">@Moderator 🛠</mark></strong>  </a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#6c484c47-c95c-499b-a2c9-3d73aaaf2884"><mark class="highlight-red_background"><strong>@Senior Moderator ⚒</strong></mark>  </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#19bcf380-a8c2-4b83-8d7c-946a10ec5917">Events Team Expectations</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#1c5a56a7-3497-49da-b21d-bbb71937c8ec"><mark class="highlight-teal_background"><strong>@Events Team 📅</strong></mark>  </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#65423c8d-d783-4123-97e7-927fa2f15463">High-Rank Expectations</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#0bfc119b-beb0-4979-9a0a-b36ab5ff6ba9"><strong><mark class="highlight-teal_background">@Community Manager 👥</mark></strong>  </a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#58db874b-44ba-4d2e-ba7b-0e9a266e6e9f"><mark class="highlight-yellow_background"><strong>@Discord Admin 🧙‍♂️</strong></mark>  </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ef4d64dc-6f0a-400a-b343-1c31925af710">In-game &amp; Discord Commands</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ccc66a42-ea71-42b9-9ad1-37ed2ca9bbb4">Dyno Command Syntax and Usage</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#bf7156c7-256b-421f-9686-a19717a676cd">Server Commands Syntax and Usage</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a2319ba5-116d-4911-a227-87508275c807">Additional Resources</a></div></nav><h1 id="fbccecc3-392c-4879-8f23-c533ed7e20a3" class="">Staff Goals &amp; Expectations</h1><p id="cab9757a-6e77-4181-8903-4c241c5272a6" class="">This is an in-depth documentation of goals and expectations that come with having a certain staff role in our community. While the term &quot;expectations&quot; may sound a bit formal, it&#x27;s important to keep in mind that everyone with a staff role is just a volunteer and that this list is merely a clear overview of what each role entails to encourage staff and server activity!</p><h2 id="f68bcc45-0643-463b-87da-5b990fa19149" class="">Moderator Expectations</h2><h3 id="4ae82701-1ea2-4d1e-9979-4dfbec7387e7" class=""><mark class="highlight-yellow_background"><strong>@Trainee Moderator </strong></mark><mark class="highlight-yellow_background">🔨</mark>  </h3><p id="7bb8f33a-3440-4947-a10a-d9ab9c126526" class="">Moderators with training wheels, possess the Moderator role but have certain limitations. </p><ul id="c6a675ab-07ad-4803-9485-6178a63d7643" class="bulleted-list"><li style="list-style-type:disc"><strong>Abide by the guidelines outlined in the </strong><strong><a href="https://docs.google.com/document/d/1FQpY-UB4_5dKcnYakJR2kEyseQlMso6MqaH5LUQ4a2I/edit?usp=sharing">Little Islands Moderator Handbook</a></strong><strong>.</strong></li></ul><ul id="93bf8e99-f67e-4303-9741-c8a98d8baa36" class="bulleted-list"><li style="list-style-type:disc"><strong>Enforce Discord rules to keep the server a positive place</strong> with the use of Dyno commands <strong>warn </strong>and <strong>mute.</strong> Command syntax and use cases can be found <a href="https://www.notion.so/Little-Islands-Community-Staff-Goals-Expectations-2fcf96b2c89b42959813f48fe842c92e">here</a>.</li></ul><ul id="75fedc52-fcc9-4bdb-b392-56b34ecfd5e7" class="bulleted-list"><li style="list-style-type:disc"><strong>Respond to player reports made in the </strong><strong><a href="https://discord.com/channels/332423878569754624/352218606139998208">🚨︱grief-reports</a></strong><strong> channel</strong>. When doing so, moderators should respond with an indication that they see the situation at hand and are on their way to help. </li></ul><ul id="7611e3e1-4ca3-48f0-8709-3540f608267e" class="bulleted-list"><li style="list-style-type:disc"><strong>Participate in discussions in our moderation channel</strong>; these can be anything from reviewing ban appeals, to handling difficult situations, and staff performance reviews. </li></ul><ul id="ddd88cc7-cb9b-48e8-9073-38dfe621f4a5" class="bulleted-list"><li style="list-style-type:disc"><strong>Demonstrate consistent levels of activity within the community.</strong> Having consistent activity helps moderators bond with the rest of the team and stay up to date with moderation policy. If an extended absence or a break from moderating (for mental health or otherwise) is needed, just let a <mark class="highlight-red_background"><strong>@Senior Moderator ⚒</strong></mark> or <strong><mark class="highlight-teal_background">@Community Manager 👥</mark></strong>  know you need the <strong><mark class="highlight-blue_background">@Temporary Leave 💤</mark></strong><strong> </strong>role!</li></ul><p id="5af71044-138e-43b5-a806-9ddd794d7ccb" class="">
+</p><h3 id="9986bab6-bb35-450e-9fdc-c56288f2030e" class=""><strong><mark class="highlight-orange_background">@Moderator 🛠</mark></strong>  </h3><p id="9194fc75-4223-4c88-a078-e55f5964c71a" class="">Moderators that have graduated from their training period and no longer have certain limitations.</p><ul id="b15e7858-8c33-4ec6-8731-43ec188bc1c0" class="bulleted-list"><li style="list-style-type:disc"><strong>Abide by the guidelines outlined in the </strong><strong><a href="https://docs.google.com/document/d/1FQpY-UB4_5dKcnYakJR2kEyseQlMso6MqaH5LUQ4a2I/edit?usp=sharing">Little Islands Moderator Handbook</a></strong><strong>.</strong></li></ul><ul id="7f1f8256-7210-4c97-8614-8a582b924477" class="bulleted-list"><li style="list-style-type:disc"><strong>Enforce Discord rules to keep the server a positive place</strong> with the use of Dyno commands <strong>warn, mute, kick, </strong>and <strong>ban.</strong> Command syntax and use cases can be found <a href="https://www.notion.so/Little-Islands-Community-Staff-Goals-Expectations-2fcf96b2c89b42959813f48fe842c92e">here</a>.</li></ul><ul id="d77c08cf-48ea-43da-8f86-436dc0fa3a94" class="bulleted-list"><li style="list-style-type:disc"><strong>Respond to player reports made in the </strong><strong><a href="https://discord.com/channels/332423878569754624/352218606139998208">🚨︱grief-reports</a></strong><strong> channel</strong>. When doing so, moderators should respond with an indication that they see the situation at hand and are on their way to help. </li></ul><ul id="d96e67db-64da-4e72-979d-b19655eb80b2" class="bulleted-list"><li style="list-style-type:disc"><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Review and respond to in-game ban appeals.</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong> In-game ban appeals can be reviewed in-game using the mod panel, it is custom to present these cases to the moderation channel to discuss whether the banned user should be appealed.</li></ul><ul id="6f6446ec-94a6-4423-8e7c-67137e205496" class="bulleted-list"><li style="list-style-type:disc"><strong>Forward and report Discord ban appeals from users to a </strong><strong><mark class="highlight-red_background">@Senior Moderator ⚒</mark></strong><strong>.</strong> Oftentimes users will reach out to moderators through DMs for Discord ban appeals, these are under the Senior Moderator’s jurisdiction. </li></ul><ul id="68fcbffe-02de-4b28-b159-9eb2d9bc4922" class="bulleted-list"><li style="list-style-type:disc"><strong>Participate in discussions in our moderation channel</strong>; these can be anything from reviewing ban appeals, handling difficult situations, and performance reviews. </li></ul><ul id="27620789-b813-4e70-9d38-a2cda3b093c4" class="bulleted-list"><li style="list-style-type:disc"><strong>Demonstrate consistent levels of activity within the community.</strong> Having consistent activity helps moderators bond with the rest of the team and stay up to date with moderation policy. If an extended absence or a break from moderating (for mental health or otherwise) is needed, just let a <mark class="highlight-red_background"><strong>@Senior Moderator ⚒</strong></mark> or <strong><mark class="highlight-teal_background">@Community Manager 👥</mark></strong>  know you need the <strong><mark class="highlight-blue_background">@Temporary Leave 💤</mark></strong><strong> </strong>role!</li></ul><p id="2ed64712-7f16-4c44-a28e-741e271c62c8" class="">
+</p><h3 id="6c484c47-c95c-499b-a2c9-3d73aaaf2884" class=""><mark class="highlight-red_background"><strong>@Senior Moderator ⚒</strong></mark>  </h3><p id="5e5af2fc-87f5-4bf8-b9ef-dd2a9d7b3fa3" class="">Well-trusted moderators that hold more responsibilities than a typical Moderator, possess the Moderator role in conjunction with their senior status.</p><ul id="c6bc7a1c-c258-47e2-9aa5-890c84f0b1ab" class="bulleted-list"><li style="list-style-type:disc"><strong>Facilitate and participate in discussions in our moderation channel</strong>; these can be anything from reviewing ban appeals, handling difficult situations, and staff performance reviews. </li></ul><ul id="e4f7cb40-374f-431d-9187-c0e2bbdc6d31" class="bulleted-list"><li style="list-style-type:disc"><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Review and respond to both in-game and Discord ban appeals.</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong> In-game ban appeals can be reviewed in-game using the mod panel while Discord ban appeals are reviewed on a case-by-case basis through DMs (often times users will reach out to moderators regarding Discord appeals). </li></ul><ul id="d86fc654-e44c-4223-8f48-e2e801f518e9" class="bulleted-list"><li style="list-style-type:disc"><strong>Monitor moderator performance and provide assistance and or guidance when needed. </strong>Trainees and other moderators will need a helping hand when it comes to learning the ropes of moderating the server. While you are not expected to “babysit” other moderators, you can help them out by being a guiding resource and showing positive reinforcement where necessary. </li></ul><ul id="a0fa13ec-321b-4f32-9a06-86b7d5f237c1" class="bulleted-list"><li style="list-style-type:disc"><strong>Consult with </strong><mark class="highlight-red_background"><strong>@Scribels 🍓</strong></mark><strong>, </strong><mark class="highlight-purple_background"><strong>@Scribels Secretary 👨‍💻,</strong></mark><strong> </strong><strong><mark class="highlight-teal_background">@Community Manager 👥</mark></strong> ,<strong> and other </strong><strong><mark class="highlight-yellow_background">@Discord Admin 🧙‍♂️</mark></strong><strong> regarding moderator performance and participate in other high-rank discussions.</strong></li></ul><h2 id="19bcf380-a8c2-4b83-8d7c-946a10ec5917" class="">Events Team Expectations</h2><h3 id="1c5a56a7-3497-49da-b21d-bbb71937c8ec" class=""><mark class="highlight-teal_background"><strong>@Events Team 📅</strong></mark>  </h3><p id="8303fd2e-00ff-413c-8a98-3d7329dcc563" class="">Staff responsible for organizing, creating, and hosting events.</p><ul id="f2f1635b-c99f-49c7-815b-c6c53db8fd6e" class="bulleted-list"><li style="list-style-type:disc"><strong>Organize events for community participation and engagement. </strong>Events staff should try to be involved in the organization of at least<strong> </strong><span style="border-bottom:0.05em solid">two events per month</span>. This does not mean each staff member must coordinate their own events twice a month, only that they should try to collaborate with other event staff in organizing these events!</li></ul><ul id="29cd3ede-ce06-481a-8509-accab0834d5f" class="bulleted-list"><li style="list-style-type:disc"><strong>Host and facilitate community-oriented events. </strong>All disruptions and event-obstructing behavior should be handled and dealt with accordingly by the events team. Occasionally, moderators may be able to assist, just be sure to reach out beforehand!</li></ul><ul id="6c6904b2-1bcd-447d-9c6a-71e6d06c6be9" class="bulleted-list"><li style="list-style-type:disc"><strong>Report questions and concerns to </strong><strong><mark class="highlight-teal_background">@Community Manager 👥</mark></strong><strong> and seek approval for events when possible. </strong>Especially if the event in question requires more than what is currently possible in-game and may need developer assistance. </li></ul><ul id="5919c2a1-9fd1-4779-980c-4357c0a5ceee" class="bulleted-list"><li style="list-style-type:disc"><strong>Write announcements for upcoming events and other applicable information using correct message formatting and language. </strong>Event organizers will be in charge of announcing events to the community using the <a href="https://discord.com/channels/332423878569754624/950889000275681281"><strong>#🎉︱events</strong></a><strong> </strong>channel. Messages should follow <a href="https://www.notion.so/Writing-Announcements-dea05f7d8e8647a78a702bafb1b93889">pre-determined formatting and language</a>.</li></ul><ul id="32bfaeb9-45ff-4af9-86f6-231b85a4828b" class="bulleted-list"><li style="list-style-type:disc"><strong>Help build assets and environments in Little Islands for events that use them. </strong>Some events like build competitions or PVP tournaments may require an area in-game for the event to take place (ex. a coliseum). Discuss amongst your team members and coordinate who may be able to help with constructing these builds for the event to be a success!</li></ul><ul id="b5843e1a-9c9a-4157-8ca3-80bc9b4054a1" class="bulleted-list"><li style="list-style-type:disc"><strong>Demonstrate consistent levels of activity within the community.</strong> Having some kind of consistent activity helps staff bond with the community. If an extended absence is required or a break from moderating (for mental health or otherwise) is needed, just let a <strong><mark class="highlight-teal_background">@Community Manager 👥</mark></strong> know you will need the <strong><mark class="highlight-blue_background">@Temporary Leave 💤</mark></strong><strong> </strong>role!</li></ul><p id="b64126d1-3172-4538-9422-e7fd753f8b55" class="">
+</p><h2 id="65423c8d-d783-4123-97e7-927fa2f15463" class="">High-Rank Expectations</h2><h3 id="0bfc119b-beb0-4979-9a0a-b36ab5ff6ba9" class=""><strong><mark class="highlight-teal_background">@Community Manager 👥</mark></strong>  </h3><p id="73984cb8-2c66-468f-bced-789b9f14402e" class="">Oversees staff and community-related happenings. Much of the events team expectations also apply to Community Managers.</p><ul id="3d0b697b-e526-4695-9319-21b97d1d1859" class="bulleted-list"><li style="list-style-type:disc"><strong>Monitor events team and encourage staff members to stay on track with their expectations. </strong>Events staff are encouraged to facilitate at least two events per month, holding a meeting at the beginning of every month to discuss plans and ideas for events will help motivate and inspire staff to meet their goals.</li></ul><ul id="7c4e54cb-e5a7-4a2b-a524-60d380167a62" class="bulleted-list"><li style="list-style-type:disc"><strong>Write announcements for upcoming events and other applicable information using correct message formatting and language. </strong>In addition to the <a href="https://discord.com/channels/332423878569754624/950889000275681281"><strong>#🎉︱events</strong></a><strong> </strong>channel, community managers can also post important information to the <a href="https://discord.com/channels/332423878569754624/332424432205168641"><strong>#📢︱announcements</strong></a><strong> and </strong><a href="https://discord.com/channels/332423878569754624/1041960601401970738"><strong>#staff-announcements</strong></a><strong> </strong>channels. </li></ul><ul id="1f8393c4-f20e-4bd1-9abf-09afa766d402" class="bulleted-list"><li style="list-style-type:disc"><strong>Coordinate staff-only events for staff member bonding. </strong>Team bonding is important! Events like staff game nights, discussion nights, and competitions are all effective ways to achieve team bonding and motivate morale.</li></ul><ul id="65403582-41fc-478c-a7cb-ed5593026b53" class="bulleted-list"><li style="list-style-type:disc"><strong>Resolve conflicts between community and staff members. </strong>Conflicts aren’t exclusive to community members, they can also happen between staff! Act as a mediator and help resolve any conflicts that may arise. </li></ul><ul id="4aa53bc6-24bd-4d93-94d7-33df4b8446d3" class="bulleted-list"><li style="list-style-type:disc"><strong>Address complaints from community members towards staff. </strong>Staff members are not above the law and are capable of community violations and mistakes.  Punishments and terminations for staff violations are at your discretion. Whatever the situation may be, get to the truth of things and ensure community trust within our team.</li></ul><ul id="9699abd9-a188-42ed-9253-3ff8205f230e" class="bulleted-list"><li style="list-style-type:disc"><strong>Consult with </strong><mark class="highlight-red_background"><strong>@scribels</strong></mark><strong>, </strong><mark class="highlight-purple_background"><strong>@Scribels Secretary 👨‍💻,</strong></mark><strong> </strong><strong><mark class="highlight-teal_background">@Community Manager 👥</mark></strong> ,<strong> and other </strong><strong><mark class="highlight-yellow_background">@Discord Admin 🧙‍♂️</mark></strong><strong> regarding moderator performance and participate in other high-rank discussions.</strong></li></ul><p id="dd907fbe-8c1e-4bb1-b50c-b0dfd11ba8ea" class="">
+</p><h3 id="58db874b-44ba-4d2e-ba7b-0e9a266e6e9f" class=""><mark class="highlight-yellow_background"><strong>@Discord Admin 🧙‍♂️</strong></mark>  </h3><p id="dbde257c-a686-47a0-8a03-f5a7e3e74312" class="">Trusted individuals who possess administrative powers to manage the Discord server.</p><ul id="b63463f3-b199-4893-abf2-3e3e9d389aaf" class="bulleted-list"><li style="list-style-type:disc"><strong>Enforce Discord rules to keep the server a positive place</strong> with the use of Dyno commands <strong>warn, mute, kick, </strong>and <strong>ban.</strong> Command syntax and use cases can be found <a href="https://www.notion.so/Little-Islands-Community-Staff-Goals-Expectations-2fcf96b2c89b42959813f48fe842c92e">here</a>.</li></ul><ul id="efedf569-a722-41ef-845d-31ecbde30265" class="bulleted-list"><li style="list-style-type:disc"><strong>Assist staff with potential Discord changes that require administrative permissions. </strong>Whether it’s granting staff roles permissions they should possess, tweaking AutoMod, or creating and editing a channel; you are the internal maintenance team of the server.</li></ul><ul id="b17b8729-5349-4e31-8da4-577fe83eb20e" class="bulleted-list"><li style="list-style-type:disc"><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Review and respond to Discord ban appeals.</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong> Discord ban appeals are reviewed on a case-by-case basis through DMs (oftentimes users will reach out to moderators and or administrators regarding Discord appeals). </li></ul><ul id="503f11e2-de4d-4bba-91a5-5aad3866684d" class="bulleted-list"><li style="list-style-type:disc"><strong>Address complaints from community members towards staff. </strong>Staff members are not above the law and are capable of community violations and mistakes.  Punishments and terminations for staff violations are at your discretion. Whatever the situation may be, get to the truth of things and ensure community trust within our team.</li></ul><ul id="a19d2792-0384-415b-ac79-53562d74893b" class="bulleted-list"><li style="list-style-type:disc"><strong>Consult with </strong><mark class="highlight-red_background"><strong>@scribels</strong></mark><strong>, </strong><mark class="highlight-purple_background"><strong>@Scribels Secretary 👨‍💻,</strong></mark><strong> </strong><strong><mark class="highlight-teal_background">@Community Manager 👥</mark></strong> ,<strong> and other </strong><strong><mark class="highlight-yellow_background">@Discord Admin 🧙‍♂️</mark></strong><strong> regarding moderator performance and participate in other high-rank discussions.</strong></li></ul><h1 id="ef4d64dc-6f0a-400a-b343-1c31925af710" class="">In-game &amp; Discord Commands</h1><h2 id="ccc66a42-ea71-42b9-9ad1-37ed2ca9bbb4" class="">Dyno Command Syntax and Usage</h2><p id="27aebe94-45b2-4085-9f37-b6322d76a86d" class="">Dyno is a bot we use to help make Discord server management and moderation easier. Below is a comprehensive list of Dyno commands that are available for our staff to use. Command permissions are inclusive of preceding commands as the list progresses (ex. moderators have both moderator permissions and trainee permissions).</p><ul id="f15cb52f-07e4-493d-85bb-f187486c4a20" class="bulleted-list"><li style="list-style-type:disc"><strong>Trainee Moderator Commands:</strong><ul id="6754cefc-34f1-469a-b10b-0b76dd8da491" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray"><code>?modlogs (user</code></mark><mark class="highlight-red"><code> </code></mark><mark class="highlight-gray"><code>id)</code></mark><mark class="highlight-orange"> </mark><em>(check logs for user moderation history)</em></li></ul><ul id="a001d59c-b09d-4535-9adb-85cc575b30fb" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray"><code>?note (user</code></mark><mark class="highlight-red"><code> </code></mark><mark class="highlight-gray"><code>id) (note)</code></mark><mark class="highlight-orange"> </mark><em>(leave notes on a user for future mods to reference)</em></li></ul><ul id="fb23f6cb-769f-4d9a-ba60-0b215c5a46e5" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray"><code>?notes (user</code></mark><mark class="highlight-red"><code> </code></mark><mark class="highlight-gray"><code>id)</code></mark><mark class="highlight-orange"> </mark><em>(view all previous notes on a user)</em></li></ul><ul id="d841ae41-4e37-43c1-9b65-8f0de4cc545e" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-orange"><code>?warn (user</code></mark><mark class="highlight-red"><code> </code></mark><mark class="highlight-orange"><code>id) (reason)</code></mark><mark class="highlight-orange"> </mark><em>(warn the player of a rule violation)</em></li></ul><ul id="7299d1dc-d71f-4a07-ad27-fd90af5e69aa" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-orange"><code>?mute (user</code></mark><mark class="highlight-red"><code> </code></mark><mark class="highlight-orange"><code>id) (time) (reason)</code></mark><mark class="highlight-orange"> </mark><em>(start muting after 3 warnings)</em></li></ul></li></ul><ul id="634f7179-7e5a-415b-a24a-38904cd9b961" class="bulleted-list"><li style="list-style-type:disc"><strong>Moderator Commands:</strong><ul id="87843833-1f1b-40a3-ab3e-fd9fb632bb97" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray"><code>?delnote (user</code></mark><mark class="highlight-red"><code> </code></mark><mark class="highlight-gray"><code>id) (note id)</code></mark><mark class="highlight-orange"> </mark><em>(leave notes on a user for future mods to reference)</em></li></ul><ul id="c70c7137-703c-4ba2-b570-1061eaaa2cad" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-red"><code>?kick (user id) (reason)</code></mark><mark class="highlight-orange"> </mark><em>(removes the user from the Discord server)</em></li></ul></li></ul><ul id="3dfa5469-e404-4e71-8c5b-4329c6e8c7a9" class="bulleted-list"><li style="list-style-type:disc"><strong>Senior Moderator Commands:</strong><ul id="c79fa7dc-5181-4bfb-9a72-a01b67f0b48c" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-red"><code>?ban save (user id) (time) (reason)</code></mark><mark class="highlight-orange"> </mark><em>(permanently removes the user from the Discord server and saves all their messages)</em></li></ul><ul id="a019bb3e-5b39-44c2-8e01-b83cd00d7b5c" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-red"><code>?ban (user id) (time) (reason)</code></mark><mark class="highlight-orange"> </mark><em>(permanently removes the user from the Discord server and deletes all their messages) </em><ul id="6d4ae1a9-083c-4549-a441-7ad1e395c1c9" class="bulleted-list"><li style="list-style-type:square"><span style="border-bottom:0.05em solid"><em>⚠NOTICE: DO NOT use this command unless the user is spamming NSFW and all messages ever posted by the user are best removed. </em></span></li></ul></li></ul><ul id="9ebf7f34-023e-4608-a697-8e6cd838d455" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-red"><code>?unban (user id) (optional reason)</code></mark><mark class="highlight-orange"> </mark><em>(unban a member from the Discord server)</em></li></ul><p id="613a4688-b4f0-4124-bb63-013c15a55906" class="">
+</p></li></ul><h2 id="bf7156c7-256b-421f-9686-a19717a676cd" class="">Server Commands Syntax and Usage</h2><p id="c2fb6e48-b344-4b1d-80c9-c3941496646f" class="">Server commands and the mod panel are currently receiving some upgrades from the development team, we’ll announce them in <a href="https://discord.com/channels/332423878569754624/1041960601401970738"><strong>#staff-announcements</strong></a> upon their full release!</p><h1 id="a2319ba5-116d-4911-a227-87508275c807" class="">Additional Resources</h1><figure id="dea05f7d-8e86-47a7-8a70-2bafb1b93889" class="link-to-page"><a href="https://www.notion.so/Writing-Announcements-dea05f7d8e8647a78a702bafb1b93889"><span class="icon">📢</span>Writing Announcements</a></figure><p id="40aca3c8-8ffb-421a-8c5d-8688c9fd5539" class="">
+</p></div></article></body></html>
